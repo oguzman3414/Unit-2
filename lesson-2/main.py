@@ -1,4 +1,27 @@
+from dataclasses import dataclass
+
+
+@dataclass
+class Dog:
+    name: str
+    weight: int
+    is_tired: bool
+
+
+def dog_sound(dog: Dog) -> str:
+    if dog.is_tired:
+        return "zzzzz"
+    elif dog.weight >= 50:
+        return "RUFF RUFF"
+    else:
+        return "yip yip yip"
+
+
+def play_with_dog(dog: Dog) -> None:
+    dog.is_tired = True
+
 # ^^^^^   Add your code above   ^^^^^
+
 # vvvvv Don't change code below vvvvv
 
 
